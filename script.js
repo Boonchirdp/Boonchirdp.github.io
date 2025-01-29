@@ -10,7 +10,7 @@ async function login() {
     const usernameMD5 = CryptoJS.MD5(username).toString();
     const passwordMD5 = CryptoJS.MD5(password).toString();
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbw0T6sSghrY16ExF_VGaw0qhzvi1M_E2yKXeDfHm-oLNz8-c9hJ4gndEGxxRyRyADMV/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycbyFMBk-Z6Un7zMwg2Vy2_GZiL3I9XxOeIVEoNGWlUJgfvDyEvCdEpBtXpqYcayMW96l0w/exec');
     const users = await response.json();
 
     const user = users.find(u => u['ชื่อผู้ใช้'] === usernameMD5 && u['รหัสผ่าน'] === passwordMD5);
